@@ -3,10 +3,7 @@
 "version":"1.0",
 "description": "RMP Extension",
 "manifest_version": 2,
-"options_ui":{
-  "page": "index.html",
-  "open_in_tab": false
-},
+"options_page": "index.html",
 "background":{
     "scripts": ["app.js"],
     "persistent": false

@@ -1,6 +1,7 @@
 #schoolform{
   text-align: center;
   position: relative;
+  margin-top: 100px; 
 }
 
 /* #schoolinput{
@@ -11,7 +12,7 @@
 } */
 
 .myButton {
-  margin-top: 20px;
+  margin-top: 10px;
    background-color:#44c767;
   -moz-border-radius:28px;
   -webkit-border-radius:28px;
@@ -84,12 +85,12 @@ body {
 background: -webkit-linear-gradient(to top, #373B44, #73C8A9);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to top, #373B44, #73C8A9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  /* display: flex;
-  align-items: center;
+  display: flex;
+  /* align-items: center; */
   justify-content: center;
-  overflow: hidden; */
-  width: 40em;
-  height: 20em;
+  overflow: hidden;
+  width: 100vw;
+  height: 1000px;
   font-family: var(--fontFamily);
   font-size: var(--fontSizeMd);
   line-height: var(--lineHeightMd);
