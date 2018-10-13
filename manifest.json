@@ -3,7 +3,11 @@
 "version":"1.0",
 "description": "RMP Extension",
 "manifest_version": 2,
-  
+"background":{
+    "scripts": ["app.js"],
+    "persistent": false
+},
+
   "permissions":[
     "activeTab"
     ]
