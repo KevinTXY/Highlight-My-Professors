@@ -20,9 +20,9 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
       var reviewsLength = allReviews.length; //stores number of reviews in the JSON file
       var url = data.url; // url to ratemyprof for reviews
       document.getElementById("fullName").innerHTML = fullName;
-      document.getElementById("rating").innerHTML = "Overall Quality: " + rating;
-      document.getElementById("takeagain").innerHTML = "Would Take Again: " + takeAgainPerc;
-      document.getElementById("difficulty").innerHTML = "Difficulty: " + difficultyLevel;
+      document.getElementById("rating").innerHTML = "Overall Quality: <span id='num'>" + rating + "</span>";
+      document.getElementById("takeagain").innerHTML = "Would Take Again: <span id='num'>" + takeAgainPerc + "</span>";
+      document.getElementById("difficulty").innerHTML = "Difficulty: <span id='num'>" + difficultyLevel + "</span>";
       document.getElementById("url").href = url;
     }
   }
