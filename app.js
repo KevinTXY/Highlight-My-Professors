@@ -27,11 +27,13 @@ async function highlight() {
       school: ""
     },
     async function(items) {
-      const uni = items.school;
-      var key = list[0] + "+" + list[list.length - 1]+'+'+uni; // Add University
+      let uni = items.school;
+      const school = uni.replace(" ", "+");
+      var key = list[0] + "+" + list[list.length - 1] + "+" + uni; // Add University
       key = key.toLowerCase();
       var value = await getAPI(key);
-      console.log(value);
+	  if(value==null) return;
+	  console.log(value);
       flag = false;
     }
   );
