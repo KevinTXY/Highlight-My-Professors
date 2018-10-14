@@ -20,7 +20,6 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
       var reviewsLength = allReviews.length; //stores number of reviews in the JSON file
       var url = data.url; // url to ratemyprof for reviews
 
-
 	  let classesSet = new Set();
 	 for(let i=0;i<reviewsLength;i++){
 		 classesSet.add(allReviews[i].class);
@@ -31,7 +30,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
 	  });
 
 	  document.getElementById("fullName").innerHTML = fullName;
-      document.getElementById("rating").innerHTML = "Overall Quality: <span id='num'>" + rating + "</span>";
+      document.getElementById("rating").innerHTML = "Overall Quality: <span id='num'>" + rating + "</span>" + "<span id='revnum'> (" + reviewsLength + " reviews) </span>";
       document.getElementById("takeagain").innerHTML = "Would Take Again: <span id='num'>" + takeAgainPerc +"</span>";
 	  document.getElementById("difficulty").innerHTML = "Difficulty: <span id='num'>" + difficultyLevel + "</span>";
 	  document.getElementById("classes").innerHTML = "Classes: " + classes;
