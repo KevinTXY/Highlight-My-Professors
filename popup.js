@@ -19,6 +19,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
       var allReviews = data.reviews; //array of all reviews with the most recent being on top
       var reviewsLength = allReviews.length; //stores number of reviews in the JSON file
       var url = data.url; // url to ratemyprof for reviews
+
 	 
 	  let classesSet = new Set();
 	 for(let i=0;i<reviewsLength;i++){
