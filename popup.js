@@ -19,10 +19,21 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
       var allReviews = data.reviews; //array of all reviews with the most recent being on top
       var reviewsLength = allReviews.length; //stores number of reviews in the JSON file
       var url = data.url; // url to ratemyprof for reviews
-      document.getElementById("fullName").innerHTML = fullName;
+	 
+	  let classesSet = new Set();
+	 for(let i=0;i<reviewsLength;i++){
+		 classesSet.add(allReviews[i].class);
+	 }
+	 let classes="";
+	 classesSet.forEach(function(value) {
+		classes=classes+" "+value;
+	  });
+
+	  document.getElementById("fullName").innerHTML = fullName;
       document.getElementById("rating").innerHTML = "Overall Quality: " + rating;
       document.getElementById("takeagain").innerHTML = "Would Take Again: " + takeAgainPerc;
-      document.getElementById("difficulty").innerHTML = "Difficulty: " + difficultyLevel;
+	  document.getElementById("difficulty").innerHTML = "Difficulty: " + difficultyLevel;
+	  document.getElementById("classes").innerHTML = "Classes: " + classes;
       document.getElementById("url").href = url;
     }
   }
