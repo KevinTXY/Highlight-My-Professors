@@ -32,8 +32,12 @@ async function highlight() {
       var key = list[0] + "+" + list[list.length - 1] + "+" + uni; // Add University
       key = key.toLowerCase();
       var value = await getAPI(key);
-	  if(value==null) return;
-	  console.log(value);
+      console.log(value);
+      chrome.runtime.sendMessage(
+        { text: "gotData", data: JSON.stringify(value) },
+        function(response) {}
+      );
+
       flag = false;
     }
   );
