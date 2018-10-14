@@ -8,6 +8,9 @@
     "scripts": ["background.js"],
     "persistent": false
 },
+"page_action": {
+  "default_popup": "popup.html"
+},
 
   "permissions":[
     "activeTab",
@@ -15,7 +18,6 @@
       "tabs",
       "webNavigation",
       "*://*/*"
-
     ],
 
     "content_scripts": [
